@@ -1,3 +1,3 @@
 # MOMENTUM APP
 
-LIVE[https://momentum-app-two.vercel.app/]
+[LIVE](https://momentum-app-two.vercel.app/)
