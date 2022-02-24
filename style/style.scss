@@ -1,0 +1,32 @@
+@import "firstPage";
+@import "secondPageLayout";
+@import "header";
+@import "firstSpacer";
+@import "secondPage";
+@import "secondSpacer";
+@import "goal";
+@import "footer";
+@import "media";
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap");
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body,
+html {
+   height: 100%;
+   color: white;
+   font-family: "ZCOOL QingKe HuangYou";
+}
+
+.bg {
+   background-image: url("https://wallpaperaccess.com/full/2346347.jpg");
+   height: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   z-index: -1000;
+}

@@ -1,0 +1,608 @@
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap");
+.name-container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  color: white;
+}
+
+.name-container .title-container {
+  text-align: center;
+  width: 100vw;
+}
+
+.name-container .title-container h1 {
+  font-size: 9vw;
+}
+
+.name-container .input-container {
+  width: 100%;
+  position: relative;
+  height: 100px;
+  margin-top: 20%;
+  overflow: hidden;
+}
+
+.name-container .input-container input {
+  width: 100%;
+  height: 100%;
+  padding-top: 65px;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  background: transparent;
+  color: white;
+  font-family: "ZCOOL QingKe HuangYou";
+  text-align: center;
+}
+
+.name-container .input-container input:focus + .label-name .name-content,
+.name-container .input-container input:valid + .label-name .name-content {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  color: white;
+}
+
+.name-container .input-container input:focus + .label-name::after,
+.name-container .input-container input:valid .label-name::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.name-container .input-container label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.name-container .input-container label .name-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 20px;
+  color: black;
+}
+
+.name-container .input-container label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid white;
+  left: 0;
+  bottom: -1px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.hide {
+  display: none;
+}
+
+#whole-page-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#whole-page-container .whole-page {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100vw;
+      grid-template-columns: 100vw;
+  -ms-grid-rows: 30px 50px 100px 150px 200px auto;
+      grid-template-rows: 30px 50px 100px 150px 200px auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+      grid-template-areas: "header" "first-spacer" "time" "second-spacer" "quote" "footer";
+}
+
+#header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+#first-spacer {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: first-spacer;
+}
+
+.time-section {
+  width: 100%;
+  height: 100%;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: time;
+}
+
+.time-section .time-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.time-section .time-container .time-display {
+  font-size: xx-large;
+}
+
+.time-section .time-container .greeting {
+  font-size: x-large;
+}
+
+#second-spacer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: second-spacer;
+}
+
+#quote-container {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: quote;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#quote-container .goal-container {
+  text-align: center;
+}
+
+#quote-container .goal-input-container {
+  margin: 20px;
+}
+
+#quote-container .goal-input-container .goal-input {
+  background: transparent;
+  width: 100%;
+  height: 20px;
+  padding: 13px 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  text-align: center;
+  color: white;
+  font-family: 'ZCOOL QingKe HuangYou';
+  font-size: 25px;
+}
+
+#footer {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#footer .quote {
+  width: 80%;
+  text-align: center;
+  overflow-wrap: break-word;
+  font-style: italic;
+  font-size: large;
+  text-shadow: 1px 1px 3px white;
+}
+
+#footer .footer-btns {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+#footer .footer-btns .todo-btn {
+  cursor: pointer;
+}
+
+#footer .quote-wrapper {
+  position: absolute;
+  left: 10px;
+  bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 80vw;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+#footer .quote-wrapper .quote-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#footer .quote-wrapper .quote-container .quote-title {
+  padding-bottom: 5px;
+}
+
+#footer .quote-wrapper .quote-container .quote-input-cont {
+  width: 80%;
+  padding: 5px 0;
+}
+
+#footer .quote-wrapper .quote-container .quote-input-cont input {
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  padding: 5px 2px;
+  width: 100%;
+  text-align: center;
+}
+
+#footer .quote-wrapper .quote-container .quote-btns {
+  padding: 5px 0;
+}
+
+#footer .quote-wrapper .quote-container .quote-btns .addQuote-btn {
+  margin: 0 5px;
+}
+
+#footer .todoList-container {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  width: 80vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  z-index: 10;
+}
+
+#footer .todoList-container .today-title {
+  width: 100%;
+  height: 30px;
+  padding: 10px 0;
+  margin: 0 10px;
+  color: white;
+}
+
+#footer .todoList-container .addNew-btn {
+  margin: 10px 0;
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#footer .todoList-container .addNew-btn .addToDo-btn {
+  background-color: #2ec4db;
+  padding: 3px 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#footer .todoList-container .addNew-btn .addToDo-btn:hover {
+  background-color: #258d9c;
+}
+
+#footer .todoList-container .addNew-input {
+  margin: 10px 0 10px 10px;
+}
+
+#footer .todoList-container .addNew-input input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#footer .todoList-container .todoList-display {
+  position: relative;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+#footer .todoList-container .todoList-display .list-container ul#list {
+  list-style: none;
+}
+
+#footer .todoList-container .todoList-display .list-container ul#list li {
+  cursor: pointer;
+  position: relative;
+  padding: 5px 0 5px 40px;
+}
+
+#footer .todoList-container .todoList-display .list-container ul#list .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+#footer .todoList-container .todoList-display .list-container ul#list li.checked {
+  text-decoration: line-through;
+}
+
+#footer .todoList-container .todoList-display .list-container ul#list li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 2px;
+  left: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .name-container .input-container {
+    height: 120px;
+  }
+  .name-container .input-container input {
+    font-size: 40px;
+  }
+  .name-container .input-container label .name-content {
+    font-size: 40px;
+  }
+  .time-section .time-container .time-display {
+    font-size: 80px;
+  }
+  #quote-container .goal-container .goal-today {
+    font-size: 50px;
+  }
+  #quote-container .goal-input-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #quote-container .goal-input-container .goal-input {
+    width: 70%;
+  }
+  #footer .quote {
+    width: 60%;
+    font-size: 30px;
+  }
+  #footer .footer-btns {
+    font-size: 20px;
+    padding: 20px;
+  }
+  #footer .footer-btns .todo-btn {
+    cursor: pointer;
+  }
+  #footer .quote-wrapper {
+    position: absolute;
+    left: 10px;
+    bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 80vw;
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+  #footer .quote-wrapper .quote-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #footer .quote-wrapper .quote-container .quote-title {
+    padding-bottom: 5px;
+  }
+  #footer .quote-wrapper .quote-container .quote-input-cont {
+    width: 80%;
+    padding: 5px 0;
+  }
+  #footer .quote-wrapper .quote-container .quote-input-cont input {
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 5px 2px;
+    width: 100%;
+    text-align: center;
+  }
+  #footer .quote-wrapper .quote-container .quote-btns {
+    padding: 5px 0;
+  }
+  #footer .quote-wrapper .quote-container .quote-btns .addQuote-btn {
+    margin: 0 5px;
+  }
+  #footer .todoList-container {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    width: 80vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    z-index: 10;
+  }
+  #footer .todoList-container .today-title {
+    width: 100%;
+    height: 30px;
+    padding: 10px 0;
+    margin: 0 10px;
+    color: white;
+  }
+  #footer .todoList-container .addNew-btn {
+    margin: 10px 0;
+    width: 100%;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #footer .todoList-container .addNew-btn .addToDo-btn {
+    background-color: #2ec4db;
+    padding: 3px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  #footer .todoList-container .addNew-btn .addToDo-btn:hover {
+    background-color: #258d9c;
+  }
+  #footer .todoList-container .addNew-input {
+    margin: 10px 0 10px 10px;
+  }
+  #footer .todoList-container .addNew-input input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #footer .todoList-container .todoList-display {
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  #footer .todoList-container .todoList-display .list-container ul#list {
+    list-style: none;
+  }
+  #footer .todoList-container .todoList-display .list-container ul#list li {
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0 5px 40px;
+  }
+  #footer .todoList-container .todoList-display .list-container ul#list .close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+  #footer .todoList-container .todoList-display .list-container ul#list li.checked {
+    text-decoration: line-through;
+  }
+  #footer .todoList-container .todoList-display .list-container ul#list li.checked::before {
+    content: "";
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 2px;
+    left: 10px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  color: white;
+  font-family: "ZCOOL QingKe HuangYou";
+}
+
+.bg {
+  background-image: url("https://wallpaperaccess.com/full/2346347.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1000;
+}
+/*# sourceMappingURL=style.css.map */

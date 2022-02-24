@@ -1,0 +1,22 @@
+.time-section {
+   width: 100%;
+   height: 100%;
+   grid-area: time;
+
+   .time-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .time-display {
+          font-size: xx-large;
+      }
+
+      .greeting {
+          font-size: x-large;
+      }
+   }
+}
